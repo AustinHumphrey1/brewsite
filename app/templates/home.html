@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Breweries - My Brewery Website</title>
+  <title>My Brewery Website</title>
 
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -19,22 +19,22 @@
     }
 
     .row.content {
-      min-height: 500px;
+      min-height: 450px;
       height: auto;
     }
 
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
-      min-height: 500px;
+      min-height: 450px;
     }
 
-    .brewery-card {
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
       border-radius: 6px;
-      padding: 20px;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
     footer {
@@ -52,6 +52,10 @@
 
       .row.content {
         min-height: auto;
+      }
+
+      .hero-image {
+        max-height: 280px;
       }
     }
   </style>
@@ -80,8 +84,18 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="breweries.html">Breweries</a></li>
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="breweries.html"
+               target="_blank"
+               rel="noopener">
+              Breweries
+            </a>
+          </li>
+
           <li><a href="#">Beer Types</a></li>
           <li><a href="#">About Us</a></li>
         </ul>
@@ -96,51 +110,42 @@
 
       <!-- Left Sidebar -->
       <div class="col-sm-2 sidenav">
-        <p><a href="index.html">Home</a></p>
-        <p><a href="breweries.html">Breweries</a></p>
+        <p>
+          <a href="breweries.html"
+             target="_blank"
+             rel="noopener">
+            Breweries
+          </a>
+        </p>
+
         <p><a href="#">Beer Types</a></p>
         <p><a href="#">About Us</a></p>
       </div>
 
-      <!-- Brewery Information -->
+      <!-- Main Section -->
       <main class="col-sm-8 text-left">
-        <h1>Our Breweries</h1>
+        <h1>Welcome to My Brewery Website</h1>
+
+        <img src="beer-glasses.jpg"
+             alt="Two glasses of golden beer on a wooden table"
+             class="img-responsive hero-image">
 
         <p>
-          Learn more about the breweries that create the beers
-          featured on our website.
+          Explore breweries, discover different beer types,
+          and learn more about the world of brewing.
         </p>
 
-        <div class="brewery-card">
-          <h3>Mountain View Brewing Company</h3>
-          <p>
-            Mountain View Brewing Company produces handcrafted ales
-            and lagers using traditional brewing methods and quality
-            ingredients.
-          </p>
-          <p><strong>Specialty:</strong> Golden ales and seasonal beers</p>
-        </div>
+        <hr>
 
-        <div class="brewery-card">
-          <h3>Riverbend Brewery</h3>
-          <p>
-            Riverbend Brewery is known for its creative recipes,
-            locally sourced ingredients, and welcoming taproom.
-          </p>
-          <p><strong>Specialty:</strong> IPAs and wheat beers</p>
-        </div>
+        <h3>Beer &amp; Brewing</h3>
 
-        <div class="brewery-card">
-          <h3>Old Oak Brewing</h3>
-          <p>
-            Old Oak Brewing focuses on rich, traditional flavors and
-            carefully aged beers inspired by classic brewing traditions.
-          </p>
-          <p><strong>Specialty:</strong> Stouts and amber ales</p>
-        </div>
+        <p>
+          Welcome to our brewery website! Here you can explore
+          different breweries and learn about a variety of beer types.
+        </p>
       </main>
 
-      <!-- Brewery Facts -->
+      <!-- Right Sidebar -->
       <aside class="col-sm-2 sidenav">
         <div class="well">
           <h4>Brewery Facts</h4>
@@ -149,7 +154,7 @@
 
         <div class="well">
           <h4>Did You Know?</h4>
-          <p>Different yeast strains can create completely different beer flavors.</p>
+          <p>Different yeast strains create different beer flavors.</p>
         </div>
       </aside>
 
@@ -162,6 +167,4 @@
   </footer>
 
 </body>
-</html>
-
 </html>
