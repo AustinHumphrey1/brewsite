@@ -1,152 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <title>My Brewery Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Breweries - My Brewery Website</title>
+
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
 
-    /* Set height of the grid */
     .row.content {
-      height: 450px;
+      min-height: 500px;
+      height: auto;
     }
 
-    /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
-      height: 100%;
+      min-height: 500px;
     }
 
-    /* Set footer background and text */
+    .brewery-card {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
     footer {
       background-color: #555;
       color: white;
       padding: 15px;
+      margin-top: 20px;
     }
 
-    /* On small screens */
     @media screen and (max-width: 767px) {
       .sidenav {
-        height: auto;
+        min-height: auto;
         padding: 15px;
       }
 
       .row.content {
-        height: auto;
+        min-height: auto;
       }
     }
   </style>
-
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#myNavbar"
+                aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-```
-<div class="navbar-header">
-  <button type="button" class="navbar-toggle"
-          data-toggle="collapse"
-          data-target="#myNavbar">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
+        <a class="navbar-brand" href="index.html">Brewery</a>
+      </div>
 
-  <a class="navbar-brand" href="#">Brewery</a>
-</div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="breweries.html">Breweries</a></li>
+          <li><a href="#">Beer Types</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
 
-<div class="collapse navbar-collapse" id="myNavbar">
+    </div>
+  </nav>
 
-  <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">Breweries</a></li>
-    <li><a href="#">Beer Types</a></li>
-    <li><a href="#">About Us</a></li>
-  </ul>
+  <!-- Main Content -->
+  <div class="container-fluid text-center">
+    <div class="row content">
 
-</div>
-```
+      <!-- Left Sidebar -->
+      <div class="col-sm-2 sidenav">
+        <p><a href="index.html">Home</a></p>
+        <p><a href="breweries.html">Breweries</a></p>
+        <p><a href="#">Beer Types</a></p>
+        <p><a href="#">About Us</a></p>
+      </div>
 
+      <!-- Brewery Information -->
+      <main class="col-sm-8 text-left">
+        <h1>Our Breweries</h1>
+
+        <p>
+          Learn more about the breweries that create the beers
+          featured on our website.
+        </p>
+
+        <div class="brewery-card">
+          <h3>Mountain View Brewing Company</h3>
+          <p>
+            Mountain View Brewing Company produces handcrafted ales
+            and lagers using traditional brewing methods and quality
+            ingredients.
+          </p>
+          <p><strong>Specialty:</strong> Golden ales and seasonal beers</p>
+        </div>
+
+        <div class="brewery-card">
+          <h3>Riverbend Brewery</h3>
+          <p>
+            Riverbend Brewery is known for its creative recipes,
+            locally sourced ingredients, and welcoming taproom.
+          </p>
+          <p><strong>Specialty:</strong> IPAs and wheat beers</p>
+        </div>
+
+        <div class="brewery-card">
+          <h3>Old Oak Brewing</h3>
+          <p>
+            Old Oak Brewing focuses on rich, traditional flavors and
+            carefully aged beers inspired by classic brewing traditions.
+          </p>
+          <p><strong>Specialty:</strong> Stouts and amber ales</p>
+        </div>
+      </main>
+
+      <!-- Brewery Facts -->
+      <aside class="col-sm-2 sidenav">
+        <div class="well">
+          <h4>Brewery Facts</h4>
+          <p>Breweries use water, malt, hops, and yeast to make beer.</p>
+        </div>
+
+        <div class="well">
+          <h4>Did You Know?</h4>
+          <p>Different yeast strains can create completely different beer flavors.</p>
+        </div>
+      </aside>
+
+    </div>
   </div>
-</nav>
 
-<!-- Main Content -->
-
-<div class="container-fluid text-center">
-
-  <div class="row content">
-
-```
-<!-- Left Sidebar -->
-<div class="col-sm-2 sidenav">
-  <p><a href="#">Breweries</a></p>
-  <p><a href="#">Beer Types</a></p>
-  <p><a href="#">About Us</a></p>
-</div>
-
-
-<!-- Main Section -->
-<div class="col-sm-8 text-left">
-
-  <h1>Welcome to my Brewery Website</h1>
-
-  <p>
-    Explore breweries, discover different beer types,
-    and learn more about the world of brewing.
-  </p>
-
-  <hr>
-
-  <h3>Beer & Brewing</h3>
-
-  <p>
-    Welcome to our brewery website! Here you can explore
-    different breweries and learn about a variety of beer types.
-  </p>
-
-</div>
-
-
-<!-- Right Sidebar -->
-<div class="col-sm-2 sidenav">
-
-  <div class="well">
-    <p>ADS</p>
-  </div>
-
-  <div class="well">
-    <p>ADS</p>
-  </div>
-
-</div>
-```
-
-  </div>
-</div>
-
-<!-- Footer -->
-
-<footer class="container-fluid text-center">
-  <p>Free beer is not worth it sometimes.</p>
-</footer>
+  <!-- Footer -->
+  <footer class="container-fluid text-center">
+    <p>Free beer is not worth it sometimes. By Austin Humphrey</p>
+  </footer>
 
 </body>
+</html>
+
 </html>
