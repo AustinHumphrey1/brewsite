@@ -28,3 +28,18 @@ BREWERIES = [
 @bp.route('/home')
 def home():
     return render_template('index.html', breweries=BREWERIES)
+
+
+@bp.route('/breweries')
+def breweries():
+    return "<p>Welcome to Breweries!</p>"
+
+
+@bp.route('/beer')
+def beer_():
+    return "<p>Welcome to beer types!</p>"
+
+
+@bp.route('/about')
+def about():
+    return "<p>welcome to about us</p>"
