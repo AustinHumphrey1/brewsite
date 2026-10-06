@@ -9,11 +9,11 @@ def home():
 
 @app.route("/breweries")
 def breweries():
-    return "<p>Hello, ICT 362 World!</p>"
+    return "<p>Welcome to Breweries!</p>"
 
 @app.route("/beer")
 def beer_():
-    return "<p>Hello, ICT 362 World!</p>"
+    return "<p>Welcome to Beer Types!</p>"
 
 @app.route("/about")
 def hello_world():
